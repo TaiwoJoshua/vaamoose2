@@ -44,7 +44,7 @@ const amenitiesIcons: Record<string, React.ElementType> = {
   'Water': Droplets,
 };
 
-export function BookingFlow({ schoolId, onBack, onComplete }: BookingFlowProps) {
+export function BookingFlow({ schoolId, onBack}: BookingFlowProps) {
   const [currentStep, setCurrentStep] = useState<BookingStep>('company');
   const [selectedCompany, setSelectedCompany] = useState<TransportCompany | null>(null);
   const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | null>(null);
@@ -56,7 +56,7 @@ export function BookingFlow({ schoolId, onBack, onComplete }: BookingFlowProps) 
   const [departureTime, setDepartureTime] = useState('');
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string | null>(null);
 
-  const { transportCompanies, isLoading: partnersLoading } = usePartners();
+  const { transportCompanies } = usePartners();
 
   const school = schools.find(s => s.id === schoolId);
   const availableCompanies = transportCompanies; // show all partners to students
@@ -127,13 +127,7 @@ const availableRoutes = selectedCompany
     handleNext();
   };
 
-  const handleLuggageUpload = () => {
-    // Simulate photo upload
-    const mockPhotos = ['/luggage1.jpg', '/luggage2.jpg'];
-    setLuggagePhotos(mockPhotos);
-    toast.success('Luggage photos uploaded successfully!');
-  };
-
+ 
   const calculateTotal = () => {
     if (!selectedRoute || !selectedVehicle) return 0;
     

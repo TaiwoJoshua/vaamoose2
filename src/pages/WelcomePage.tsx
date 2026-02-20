@@ -5,7 +5,7 @@ import {
   Shield, Clock, Users, ChevronDown, Bus,
   CheckCircle2, Phone, Zap
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+
 
 interface WelcomePageProps {
   onGetStarted: () => void;

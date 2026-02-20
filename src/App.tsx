@@ -8,7 +8,7 @@ import { TrackingDashboard } from '@/components/tracking/TrackingDashboard';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { LoginModal } from '@/components/auth/LoginModal';
-import { PartnerLogin } from '@/pages/partnerLogin';
+import { PartnerLogin } from '@/pages/PartnerLogin';
 import { PartnerDashboard } from '@/pages/PartnerDashboard';
 import { PaymentVerify } from '@/pages/PaymentVerify';
 import { BookingHistory } from '@/pages/BookingHistory';
@@ -36,7 +36,7 @@ function AppContent() {
   const [currentView, setCurrentView] = useState<AppView>('welcome');
   const [showLogin, setShowLogin] = useState(false);
   const [selectedSchool, setSelectedSchool] = useState<string | null>(null);
-  const [selectedPartner, setSelectedPartner] = useState<string | null>(null);
+  const [, setSelectedPartner] = useState<string | null>(null);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);

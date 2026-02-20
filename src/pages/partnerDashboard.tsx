@@ -454,7 +454,7 @@ export function PartnerDashboard({ onBack }: PartnerDashboardProps) {
                             <div className="mt-2">
                               <p className="text-xs text-slate-500 mb-1">Luggage Photos:</p>
                               <div className="flex gap-2">
-                                {booking.luggagePhotos.map((photo: string, i: number) => (
+                                {booking.luggagePhotos.map((_: string, i: number) => (
                                   <div key={i} className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
                                     <Package className="w-5 h-5 text-slate-400" />
                                   </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Bus, Mail, Lock, User, Phone, MapPin, Eye, EyeOff } from 'lucide-react';
+import { Bus, Mail, Lock, Phone, MapPin, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
